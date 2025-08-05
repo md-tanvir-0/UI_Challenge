@@ -17,7 +17,7 @@
                 <a href="#">About</a>
                 <a href="#" class="dropdown">Features <span class="arrow down"></span></a>
                 <a href="#">Pricing</a>
-                <a href="#" class="btn btn-secondary">Login</a>
+                <a onclick="toggleLogin(true)" href="#" class="btn btn-secondary">Login</a>
                 <a href="#" class="btn btn-primary">Get in touch<span class="arrow right b-white"></span></a>
             </div>
         </div>
@@ -303,11 +303,40 @@
 
                 </div>
             </div>
+
+            <!-- Login Modal -->
+            <div id="loginModal" class="login-modal hidden">
+                <div class="login-box">
+                    <button class="close-btn" onclick="toggleLogin(false)">×</button>
+                    <h2>Login</h2>
+                    <input type="email" placeholder="Email" class="input" />
+                    <input type="password" placeholder="Password" class="input" />
+                    <button class="btn btn-outline" onclick="login()">Log In</button>
+                </div>
+            </div>
+
             <div class="copyright">
                 Copyright © 2025. All rights reserved.
             </div>
         </div>
     </footer>
 </body>
+
+<script>
+    function toggleLogin(show) {
+        const modal = document.getElementById("loginModal");
+        if (show) {
+            modal.classList.remove("hidden");
+        } else {
+            modal.classList.add("hidden");
+        }
+    }
+
+    function login() {
+        alert("Login pressed!");
+        // toggleLogin(false);
+    }
+</script>
+
 
 </html>
