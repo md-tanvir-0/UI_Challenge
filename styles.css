@@ -329,7 +329,7 @@
  }
 
  .stats-container {
-    display: grid;
+    display: flex;;
     grid-template-columns: 1fr; /* Mobile: 1 column */
     gap: 1.5rem;
     background-color: #6b7280;
@@ -873,7 +873,11 @@
     }
          .form-group {
      margin-bottom: 0.5rem;
- }
+    }
+    .stats-container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
  }
 
  /* Loading Animation */
