@@ -4,339 +4,1236 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UI Challenge</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>TechVision - Modern Solutions</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <nav class="navbar">
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
         <div class="container">
-            <div class="logo">LOGO</div>
+            <div class="logo">TechVision</div>
             <div class="nav-links">
-                <a href="#" class="active">Home</a>
-                <a href="#">About</a>
-                <a href="#" class="dropdown">Features <span class="arrow down"></span></a>
-                <a href="#">Pricing</a>
-                <a onclick="toggleLogin(true)" href="#" class="btn btn-secondary">Login</a>
-                <a href="#" class="btn btn-primary">Get in touch<span class="arrow right b-white"></span></a>
+                <a href="#" class="nav-link active" data-page="home">Home</a>
+                <a href="#" class="nav-link" data-page="about">About</a>
+                <a href="#" class="nav-link" data-page="services">Services</a>
+                <a href="#" class="nav-link" data-page="pricing">Pricing</a>
+                <a href="#" class="nav-link" data-page="contact">Contact</a>
+                <a href="#" class="btn btn-secondary" onclick="openModal('loginModal')">Login</a>
+                <a href="#" class="btn btn-primary" data-page="contact">Get Started</a>
             </div>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Lorem ipsum dolor sit amet consectetur adipiscing elit</h1>
-                <p>Suspendic id sem nisi. Cras sit tellus amet. Morbi a pulvinar urna, eu viverra arcu. In tortor tellus
-                    tincidunt. Proin rhoncus quam a pulvinar tempor. Sed at rhoncus nunc, ut malesuada augue.</p>
-                <div class="buttons">
-                    <a href="#" class="btn btn-primary">Primary Action</a>
-                    <a href="#" class="btn btn-outline">Secondary Action</a>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+        <a href="#" class="nav-link active" data-page="home">Home</a>
+        <a href="#" class="nav-link" data-page="about">About</a>
+        <a href="#" class="nav-link" data-page="services">Services</a>
+        <a href="#" class="nav-link" data-page="pricing">Pricing</a>
+        <a href="#" class="nav-link" data-page="contact">Contact</a>
+        <a href="#" class="btn btn-secondary" onclick="openModal('loginModal')">Login</a>
+        <a href="#" class="btn btn-primary" data-page="contact">Get Started</a>
+    </nav>
+
+    <!-- Home Page -->
+    <div class="page active" id="home">
+        <!-- Hero Section -->
+        <section class="feature">
+            <div class="container">
+                <div class="feature-content">
+                    <div class="feature-text fade-in">
+                        <h2>Innovation Meets Excellence</h2>
+                        <p>Our comprehensive approach combines strategic thinking with technical expertise to deliver solutions that drive real business results. We partner with you to understand your unique challenges and create tailored solutions.</p>
+                        <div class="feature-buttons">
+                            <a href="#" class="btn btn-primary" data-page="services">
+                                Explore Services <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <a href="#" class="btn btn-outline" data-page="about">Our Story</a>
+                        </div>
+                    </div>
+                    <div class="feature-image fade-in">
+                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Team collaboration" />
+                    </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="gallery">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2>Our Work in Action</h2>
+                    <p>Explore some of our recent projects and see how we've helped businesses transform their digital presence.</p>
+                </div>
+                <div class="gallery-grid">
+                    <div class="gallery-item fade-in">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Project 1" />
+                    </div>
+                    <div class="gallery-item fade-in">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Project 2" />
+                    </div>
+                    <div class="gallery-item fade-in">
+                        <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Project 3" />
+                    </div>
+                    <div class="gallery-item fade-in">
+                        <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Project 4" />
+                    </div>
+                    <div class="gallery-item fade-in">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Project 5" />
+                    </div>
+                    <div class="gallery-item fade-in">
+                        <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Project 6" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        </section>
+        <section class="stats">
+            <div class="container">
+                <div class="stats-header fade-in">
+                    <h2>Trusted by Industry Leaders</h2>
+                    <p>Our track record speaks for itself with measurable results and satisfied clients across diverse industries.</p>
+                </div>
+                <div class="stats-container">
+                    <div class="stats-card fade-in">
+                        <h3>500+</h3>
+                        <h4>Projects Completed</h4>
+                        <p>Successfully delivered projects ranging from startups to enterprise solutions, each tailored to specific business needs.</p>
+                        <a href="#" class="link" data-page="services">
+                            View Portfolio <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="stats-card fade-in">
+                        <h3>98%</h3>
+                        <h4>Client Satisfaction</h4>
+                        <p>Our commitment to excellence ensures that clients not only meet their goals but exceed their expectations.</p>
+                        <a href="#" class="link" data-page="about">
+                            Read Reviews <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="stats-card fade-in">
+                        <h3>50+</h3>
+                        <h4>Expert Team Members</h4>
+                        <p>A diverse team of designers, developers, and strategists working together to bring your vision to life.</p>
+                        <a href="#" class="link" data-page="about">
+                            Read Reviews <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+        </section>
+        <!-- Testimonials Section -->
+        <section class="cards">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2>What Our Clients Say</h2>
+                    <p>Don't just take our word for it. Here's what our clients have to say about working with us.</p>
+                </div>
+                <div class="cards-container">
+                    <div class="card fade-in">
+                        <p>"TechVision transformed our outdated system into a modern, efficient platform. Their expertise and dedication exceeded our expectations at every step."</p>
+                        <h4>Sarah Johnson</h4>
+                        <span>CEO & Founder, InnovateCorp</span>
+                    </div>
+                    <div class="card fade-in">
+                        <p>"The team's attention to detail and innovative approach helped us achieve a 300% increase in user engagement. Truly exceptional work."</p>
+                        <h4>Michael Chen</h4>
+                        <span>VP of Technology, Digital Solutions</span>
+                    </div>
+                    <div class="card fade-in">
+                        <p>"Professional, creative, and results-driven. TechVision delivered exactly what we needed and more. Highly recommended for any tech project."</p>
+                        <h4>Emily Rodriguez</h4>
+                        <span>Product Manager, StartupX</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Preview -->
+        <section class="services">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2>Our Core Services</h2>
+                    <p>We offer comprehensive solutions designed to help your business thrive in the digital landscape.</p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-item fade-in">
+                        <div class="image-placeholder">
+                            <i class="fas fa-paint-brush" style="font-size: 3rem; color: white;"></i>
+                        </div>
+                        <div class="content">
+                            <h3>Web Design</h3>
+                            <p>Creating beautiful, user-friendly designs that capture your brand essence and engage your audience effectively.</p>
+                            <a href="#" class="link" data-page="services">
+                                Learn More <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="service-item fade-in">
+                        <div class="image-placeholder">
+                            <i class="fas fa-code" style="font-size: 3rem; color: white;"></i>
+                        </div>
+                        <div class="content">
+                            <h3>Web Development</h3>
+                            <p>Building robust, scalable web applications using the latest technologies and best practices for optimal performance.</p>
+                            <a href="#" class="link" data-page="services">
+                                Learn More <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="service-item fade-in">
+                        <div class="image-placeholder">
+                            <i class="fas fa-mobile-alt" style="font-size: 3rem; color: white;"></i>
+                        </div>
+                        <div class="content">
+                            <h3>Mobile Development</h3>
+                            <p>Developing native and cross-platform mobile applications that deliver seamless user experiences across all devices.</p>
+                            <a href="#" class="link" data-page="services">
+                                Learn More <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- About Page -->
+    <div class="page" id="about">
+        <div class="page-hero">
+            <div class="container">
+                <h1>About TechVision</h1>
+                <p>Pioneering digital transformation through innovation, expertise, and passion</p>
             </div>
         </div>
-    </section>
+        
+        <section class="content-section">
+            <div class="container">
+                <div class="feature-content">
+                    <div class="feature-text">
+                        <h2>Our Story</h2>
+                        <p>Founded in 2018, TechVision emerged from a simple belief: technology should empower businesses, not complicate them. What started as a small team of passionate developers and designers has grown into a full-service digital agency.</p>
+                        <p>We've helped over 500 companies transform their digital presence, from startups finding their footing to established enterprises reimagining their future. Our approach combines technical excellence with strategic thinking, ensuring every solution we deliver drives real business value.</p>
+                        <h3>Our Mission</h3>
+                        <p>To democratize access to world-class technology solutions, making innovation achievable for businesses of all sizes while maintaining the highest standards of quality and service.</p>
+                    </div>
+                    <div class="feature-image">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Our team" />
+                    </div>
+                </div>
+                
+                <div class="section-header" style="margin-top: 4rem;">
+                    <h2>Meet Our Leadership Team</h2>
+                    <p>The visionaries and experts driving our mission forward</p>
+                </div>
+                
+                <div class="team-grid">
+                    <div class="team-member">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="CEO" />
+                        <h4>Alex Thompson</h4>
+                        <span>Chief Executive Officer</span>
+                        <p>15+ years in tech leadership, former Silicon Valley executive</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="CTO" />
+                        <h4>Maria Garcia</h4>
+                        <span>Chief Technology Officer</span>
+                        <p>Expert in scalable architecture and emerging technologies</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Design Director" />
+                        <h4>David Kim</h4>
+                        <span>Creative Director</span>
+                        <p>Award-winning designer with a passion for user experience</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Strategy Director" />
+                        <h4>Lisa Chen</h4>
+                        <span>Strategy Director</span>
+                        <p>Business strategist focused on digital transformation</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 
-    <section class="feature">
-        <div class="container">
-            <div class="feature-content">
-                <div class="feature-text">
-                    <h2>Vestibulum ultricies hend rerit prei tium</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elitsed sit odit pretium urna vel volutpat
-                        varius.</p>
-                    <div class="feature-buttons">
-                        <a href="#" class="btn btn-primary">Get started<span class="arrow right  b-white"></span></a>
-                        <a href="#" class="btn btn-secondary">Learn more</a>
-                    </div>
-                </div>
-                <div class="feature-image">
-                    <div class="image-placeholder">
-                        <img src="assets/image1.png" alt="Feature Image"
-                            style="width:100%; height:100%; object-fit: cover; border-radius: 8px;" />
-                    </div>
-                </div>
+    <!-- Services Page -->
+    <div class="page" id="services">
+        <div class="page-hero">
+            <div class="container">
+                <h1>Our Services</h1>
+                <p>Comprehensive solutions for your digital transformation journey</p>
             </div>
         </div>
-    </section>
-
-    <section class="stats">
-        <div class="container">
-            <div class="stats-header">
-                <h2>Dolor mollis arcu vehicu</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing eli <br> tsed sit odit pretium urna vel volutpat
-                    varius.
-                </p>
+        
+        <section class="content-section">
+            <div class="container">
+                <div class="services-grid">
+                    <div class="service-item">
+                        <div class="image-placeholder">
+                            <i class="fas fa-paint-brush" style="font-size: 3rem; color: white;"></i>
+                        </div>
+                        <div class="content">
+                            <h3>Web Design</h3>
+                            <p>Create stunning, user-centric designs that reflect your brand identity and engage your audience. Our design process focuses on usability, accessibility, and conversion optimization.</p>
+                            <ul style="list-style: none; padding: 0; margin: 1rem 0;">
+                                <li>• UI/UX Design</li>
+                                <li>• Responsive Design</li>
+                                <li>• Brand Integration</li>
+                                <li>• Prototyping & Testing</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="service-item">
+                        <div class="image-placeholder">
+                            <i class="fas fa-code" style="font-size: 3rem; color: white;"></i>
+                        </div>
+                        <div class="content">
+                            <h3>Web Development</h3>
+                            <p>Build robust, scalable web applications using cutting-edge technologies. From simple websites to complex enterprise solutions, we deliver performance and reliability.</p>
+                            <ul style="list-style: none; padding: 0; margin: 1rem 0;">
+                                <li>• Frontend Development</li>
+                                <li>• Backend Development</li>
+                                <li>• API Integration</li>
+                                <li>• Performance Optimization</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="service-item">
+                        <div class="image-placeholder">
+                            <i class="fas fa-mobile-alt" style="font-size: 3rem; color: white;"></i>
+                        </div>
+                        <div class="content">
+                            <h3>Mobile Development</h3>
+                            <p>Develop native and cross-platform mobile applications that provide seamless user experiences across iOS and Android devices.</p>
+                            <ul style="list-style: none; padding: 0; margin: 1rem 0;">
+                                <li>• iOS Development</li>
+                                <li>• Android Development</li>
+                                <li>• Cross-platform Solutions</li>
+                                <li>• App Store Optimization</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="service-item">
+                        <div class="image-placeholder">
+                            <i class="fas fa-cloud" style="font-size: 3rem; color: white;"></i>
+                        </div>
+                        <div class="content">
+                            <h3>Cloud Solutions</h3>
+                            <p>Leverage cloud technologies to scale your business efficiently. We help you migrate, optimize, and manage your cloud infrastructure.</p>
+                            <ul style="list-style: none; padding: 0; margin: 1rem 0;">
+                                <li>• Cloud Migration</li>
+                                <li>• Infrastructure Management</li>
+                                <li>• DevOps Solutions</li>    
+                                <li>• Security & Compliance</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="service-item">
+                        <div class="image-placeholder">
+                            <i class="fas fa-chart-line" style="font-size: 3rem; color: white;"></i>
+                        </div>
+                        <div class="content">
+                            <h3>Digital Marketing</h3>
+                            <p>Grow your online presence with data-driven marketing strategies. From SEO to social media management, we help you reach your target audience.</p>
+                            <ul style="list-style: none; padding: 0; margin: 1rem 0;">
+                                <li>• Search Engine Optimization</li>
+                                <li>• Pay-Per-Click Advertising</li>
+                                <li>• Social Media Marketing</li>
+                                <li>• Content Strategy</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="service-item">
+                        <div class="image-placeholder">
+                            <i class="fas fa-cogs" style="font-size: 3rem; color: white;"></i>
+                        </div>
+                        <div class="content">
+                            <h3>Consulting</h3>
+                            <p>Strategic guidance to help you make informed technology decisions. Our experts work with you to develop roadmaps for digital transformation.</p>
+                            <ul style="list-style: none; padding: 0; margin: 1rem 0;">
+                                <li>• Technology Strategy</li>
+                                <li>• Digital Transformation</li>
+                                <li>• Process Optimization</li>
+                                <li>• Training & Support</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="stats-container">
+        </section>
+    </div>
 
-                <div class="stats-card">
-                    <h3>200+</h3>
-                    <h4>Vestibulum hendrerit</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit elitsed sit odit pretium urna vel volutpat
-                        varius.</p>
-                    <a href="#" class="link">Learn more <span class="arrow right  b-white"></span></a>
-                </div>
-                <div class="stats-card">
-                    <h3>97%</h3>
-                    <h4>Massa felis determinam</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit elitsed sit odit pretium urna vel volutpat
-                        varius.</p>
-                    <a href="#" class="link">Learn more <span class="arrow right  b-white"></span></a>
-                </div>
-                <div class="stats-card">
-                    <h3>34+</h3>
-                    <h4>Praesent vitae nisi</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit elitsed sit odit pretium urna vel volutpat
-                        varius.</p>
-                    <a href="#" class="link">Learn more <span class="arrow right b-white"></span></a>
-                </div>
+    <!-- Pricing Page -->
+    <div class="page" id="pricing">
+        <div class="page-hero">
+            <div class="container">
+                <h1>Pricing Plans</h1>
+                <p>Choose the perfect plan for your business needs</p>
             </div>
         </div>
-    </section>
-
-    <section class="gallery">
-        <div class="container">
-            <div class="section-header">
-                <h2>Cras laoreet orci nulla</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing eli <br> mattis sit odit pretium urna vel volutpat
-                    varius.</p>
+        
+        <section class="content-section">
+            <div class="container">
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <h3>Starter</h3>
+                        <div class="price">$2,999</div>
+                        <p>Perfect for small businesses and startups</p>
+                        <ul class="features-list">
+                            <li>Custom Website Design</li>
+                            <li>Responsive Development</li>
+                            <li>Basic SEO Setup</li>
+                            <li>3 Months Support</li>
+                            <li>Content Management System</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline" data-page="contact">Get Started</a>
+                    </div>
+                    
+                    <div class="pricing-card featured">
+                        <h3>Professional</h3>
+                        <div class="price">$7,999</div>
+                        <p>Ideal for growing businesses</p>
+                        <ul class="features-list">
+                            <li>Everything in Starter</li>
+                            <li>Advanced Functionality</li>
+                            <li>E-commerce Integration</li>
+                            <li>6 Months Support</li>
+                            <li>Performance Optimization</li>
+                            <li>Analytics Integration</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary" data-page="contact">Most Popular</a>
+                    </div>
+                    
+                    <div class="pricing-card">
+                        <h3>Enterprise</h3>
+                        <div class="price">Custom</div>
+                        <p>Tailored solutions for large organizations</p>
+                        <ul class="features-list">
+                            <li>Everything in Professional</li>
+                            <li>Custom Integrations</li>
+                            <li>Scalable Architecture</li>
+                            <li>Dedicated Support</li>
+                            <li>Advanced Security</li>
+                            <li>Training & Documentation</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline" data-page="contact">Contact Us</a>
+                    </div>
+                </div>
             </div>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <div class="image-placeholder">
-                        <img src="assets/image3.png" alt="Gallery Image 2"
-                            style="width:100%; height:100%; object-fit: cover; border-radius: 8px;">
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <div class="image-placeholder">
-                        <img src="assets/image2.png" alt="Gallery Image 3"
-                            style="width:100%; height:100%; object-fit: cover; border-radius: 8px;">
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <div class="image-placeholder">
-                        <img src="assets/image4.png" alt="Gallery Image 4"
-                            style="width:100%; height:100%; object-fit: cover; border-radius: 8px;">
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <div class="image-placeholder">
-                        <img src="assets/image5.png" alt="Gallery Image 5"
-                            style="width:100%; height:100%; object-fit: cover; border-radius: 8px;">
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <div class="image-placeholder">
-                        <img src="assets/image6.png" alt="Gallery Image 6"
-                            style="width:100%; height:100%; object-fit: cover; border-radius: 8px;">
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <div class="image-placeholder">
-                        <img src="assets/image7.png" alt="Gallery Image 7"
-                            style="width:100%; height:100%; object-fit: cover; border-radius: 8px;">
-                    </div>
-                </div>
+        </section>
+    </div>
+
+    <!-- Contact Page -->
+    <div class="page" id="contact">
+        <div class="page-hero">
+            <div class="container">
+                <h1>Get In Touch</h1>
+                <p>Ready to start your project? Let's discuss how we can help you achieve your goals</p>
             </div>
         </div>
-    </section>
-
-    <section class="cards">
-        <div class="container">
-            <div class="section-header">
-                <h2>Pellent esque er nibh</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing eli <br> mattis sit odit pretium urna vel volutpat
-                    varius.
-                </p>
-            </div>
-            <div class="cards-container">
-                <div class="card">
-                    <p>"Lorem ipsum dolor sit amet consectetur adipiscing elitsed sit odit pretium ursus finibus lorem
-                        ut
-                        malesuada augue sed at rhoncus nunc."</p>
-                    <h4>Morbi sed</h4>
-                    <span>CEO & Founder</span>
-                </div>
-                <div class="card">
-                    <p>"Lorem ipsum dolor sit amet consectetur adipiscing elitsed sit odit pretium ursus finibus lorem
-                        ut
-                        malesuada augue sed at rhoncus nunc."</p>
-                    <h4>Aliquam Congue</h4>
-                    <span>VP of Finance</span>
-                </div>
-                <div class="card">
-                    <p>"Lorem ipsum dolor sit amet consectetur adipiscing elitsed sit odit pretium ursus finibus lorem
-                        ut
-                        malesuada augue sed at rhoncus nunc."</p>
-                    <h4>Fusce Varius Dui</h4>
-                    <span>VP of Product</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="services">
-        <div class="container">
-            <div class="section-header">
-                <h2>Praesent et nisi nisl</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing eli <br> mattis sit odit pretium urna vel volutpat
-                    varius.
-                </p>
-            </div>
-            <div class="services-grid">
-                <div class="service-item">
-                    <div class="image-placeholder">
-                        <img src="assets/image8.png" alt="Gallery Image 3"
-                            style="width:100%; height:100%; object-fit: cover; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+        
+        <section class="content-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2>Let's Start a Conversation</h2>
+                        <p>We're here to help you bring your vision to life. Whether you have a specific project in mind or just want to explore possibilities, we'd love to hear from you.</p>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Visit Our Office</h4>
+                                <p>123 Innovation Drive<br>Tech Hub, CA 94105</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Call Us</h4>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email Us</h4>
+                                <p>hello@techvision.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Business Hours</h4>
+                                <p>Mon - Fri: 9:00 AM - 6:00 PM<br>Sat: 10:00 AM - 4:00 PM</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="content">
-                        <h3>Web design</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elitsed sit odit pretium urna vel volutpat
-                            varius.</p>
-                        <a href="#" class="link">Learn more <span class="arrow right b-blue"></span></a>
-                    </div>
-                </div>
-                <div class="service-item">
-                    <div class="image-placeholder">
-                        <img src="assets/image9.png" alt="Gallery Image 3"
-                            style="width:100%; height:100%; object-fit: cover; border-top-left-radius: 8px; border-top-right-radius: 8px;">
-                    </div>
-                    <div class="content">
-                        <h3>Web development</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elitsed sit odit pretium urna vel volutpat
-                            varius.</p>
-                        <a href="#" class="link">Learn more <span class="arrow right b-blue"></span></a>
-                    </div>
-                </div>
-                <div class="service-item">
-                    <div class="image-placeholder">
-                        <img src="assets/image10.png" alt="Gallery Image 3"
-                            style="width:100%; height:100%; object-fit: cover; border-top-left-radius: 8px; border-top-right-radius: 8px;">
-                    </div>
-                    <div class="content">
-                        <h3>UI/UX design</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elitsed sit odit pretium urna vel volutpat
-                            varius.</p>
-                        <a href="#" class="link">Learn more <span class="arrow right b-blue"></span></a>
-                    </div>
-                </div>
-
-                <div class="service-item">
-                    <div class="image-placeholder">
-                        <img src="assets/image11.png" alt="Gallery Image 3"
-                            style="width:100%; height:100%; object-fit: cover; border-top-left-radius: 8px; border-top-right-radius: 8px;">
-                    </div>
-                    <div class="content">
-                        <h3>Product design</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elitsed sit odit pretium urna vel volutpat
-                            varius.</p>
-                        <a href="#" class="link">Learn more <i class="arrow right b-blue"></i></a>
-                    </div>
-                </div>
-                <div class="service-item">
-                    <div class="image-placeholder">
-                        <img src="assets/image12.png" alt="Gallery Image 3"
-                            style="width:100%; height:100%; object-fit: cover; border-top-left-radius: 8px; border-top-right-radius: 8px;">
-                    </div>
-                    <div class="content">
-                        <h3>Graphic design</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elitsed sit odit pretium urna vel volutpat
-                            varius.</p>
-                        <a href="#" class="link">Learn more <i class="arrow right b-blue"></i></a>
-                    </div>
-                </div>
-                <div class="service-item">
-                    <div class="image-placeholder">
-                        <img src="assets/image13.png" alt="Gallery Image 3"
-                            style="width:100%; height:100%; object-fit: cover; border-top-left-radius: 8px; border-top-right-radius: 8px;">
-                    </div>
-                    <div class="content">
-                        <h3>Branding design</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elitsed sit odit pretium urna vel volutpat
-                            varius.</p>
-                        <a href="#" class="link">Learn more <i class="arrow right b-blue"></i></a>
+                    
+                    <div class="contact-form">
+                        <h3>Send Us a Message</h3>
+                        <form id="contactForm">
+                            <div class="success-message" id="contactSuccess">
+                                Thank you! Your message has been sent successfully.
+                            </div>
+                            <div class="error-message" id="contactError">
+                                Please fill in all required fields.
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" class="form-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name *</label>
+                                    <input type="text" id="lastName" class="form-input" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Company</label>
+                                <input type="text" id="company" class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject *</label>
+                                <input type="text" id="subject" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" class="form-input" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" id="submitBtn">
+                                Send Message <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h4>Column One</h4>
+                    <h4>Company</h4>
                     <ul>
-                        <li><a href="#">Twenty One</a></li>
-                        <li><a href="#">Thirty Two</a></li>
-                        <li><a href="#">Fourty Three</a></li>
-                        <li><a href="#">Fifty Four</a></li>
+                        <li><a href="#" data-page="about">About Us</a></li>
+                        <li><a href="#" data-page="services">Our Services</a></li>
+                        <li><a href="#" data-page="pricing">Pricing</a></li>
+                        <li><a href="#" data-page="contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h4>Column Two</h4>
+                    <h4>Services</h4>
                     <ul>
-                        <li><a href="#">Sixty Five</a></li>
-                        <li><a href="#">Seventy Six</a></li>
-                        <li><a href="#">Eighty Seven</a></li>
-                        <li><a href="#">Ninety Eight</a></li>
+                        <li><a href="#" data-page="services">Web Design</a></li>
+                        <li><a href="#" data-page="services">Development</a></li>
+                        <li><a href="#" data-page="services">Mobile Apps</a></li>
+                        <li><a href="#" data-page="services">Consulting</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h4>Column Three</h4>
+                    <h4>Resources</h4>
                     <ul>
-                        <li><a href="#">One Two</a></li>
-                        <li><a href="#">Three Four</a></li>
-                        <li><a href="#">Five Six</a></li>
-                        <li><a href="#">Seven Eight</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Case Studies</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Support</a></li>
                     </ul>
                 </div>
-                <div class="footer-column social">
-                    <h4>Join Us</h4>
+                <div class="footer-column">
+                    <h4>Follow Us</h4>
                     <div class="social-icons">
-                        <a href="#"><img src="assets/yt.png" alt="YouTube"></a>
-                        <a href="#"><img src="assets/fb.png" alt="Facebook"></a>
-                        <a href="#"><img src="assets/twt.png" alt="Twitter"></a>
-                        <a href="#"><img src="assets/ig.png" alt="Instagram"></a>
-                        <a href="#"><img src="assets/in.png" alt="LinkedIn"></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
                     </div>
-
                 </div>
             </div>
-
-            <!-- Login Modal -->
-            <div id="loginModal" class="login-modal hidden">
-                <div class="login-box">
-                    <button class="close-btn" onclick="toggleLogin(false)">×</button>
-                    <h2>Login</h2>
-                    <input type="email" placeholder="Email" class="input" />
-                    <input type="password" placeholder="Password" class="input" />
-                    <button class="btn btn-outline" onclick="login()">Log In</button>
-                </div>
-            </div>
-
             <div class="copyright">
-                Copyright © 2025. All rights reserved.
+                <p>&copy; 2025 TechVision. All rights reserved. | Privacy Policy | Terms of Service</p>
             </div>
         </div>
     </footer>
-</body>
 
-<script>
-    function toggleLogin(show) {
-        const modal = document.getElementById("loginModal");
-        if (show) {
-            modal.classList.remove("hidden");
-        } else {
-            modal.classList.add("hidden");
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('loginModal')">
+                <i class="fas fa-times"></i>
+            </button>
+            <h2>Welcome Back</h2>
+            <p style="margin-bottom: 2rem; color: #718096;">Sign in to your account</p>
+            <form id="loginForm">
+                <div class="success-message" id="loginSuccess">
+                    Login successful! Welcome back.
+                </div>
+                <div class="error-message" id="loginError">
+                    Please check your credentials and try again.
+                </div>
+                <div class="form-group">
+                    <label for="loginEmail">Email Address</label>
+                    <input type="email" id="loginEmail" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" class="form-input" required>
+                </div>
+                <button type="submit" class="btn btn-primary" id="loginBtn" style="width: 100%; margin-bottom: 1rem;">
+                    Sign In
+                </button>
+            </form>
+            <p style="text-align: center; color: #718096;">
+                Don't have an account? 
+                <a href="#" onclick="switchModal('loginModal', 'registerModal')" style="color: #4a5568; font-weight: 500;">Create one</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Registration Modal -->
+    <div class="modal" id="registerModal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('registerModal')">
+                <i class="fas fa-times"></i>
+            </button>
+            <h2>Create Account</h2>
+            <p style="margin-bottom: 2rem; color: #718096;">Join us and start your journey</p>
+            <form id="registerForm">
+                <div class="success-message" id="registerSuccess">
+                    Account created successfully! Welcome to TechVision.
+                </div>
+                <div class="error-message" id="registerError">
+                    Please fill in all required fields correctly.
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="regFirstName">First Name</label>
+                        <input type="text" id="regFirstName" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regLastName">Last Name</label>
+                        <input type="text" id="regLastName" class="form-input" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="regEmail">Email Address</label>
+                    <input type="email" id="regEmail" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="regCompany">Company (Optional)</label>
+                    <input type="text" id="regCompany" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label for="regPassword">Password</label>
+                    <input type="password" id="regPassword" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="regConfirmPassword">Confirm Password</label>
+                    <input type="password" id="regConfirmPassword" class="form-input" required>
+                </div>
+                <button type="submit" class="btn btn-primary" id="registerBtn" style="width: 100%; margin-bottom: 1rem;">
+                    Create Account
+                </button>
+            </form>
+            <p style="text-align: center; color: #718096;">
+                Already have an account? 
+                <a href="#" onclick="switchModal('registerModal', 'loginModal')" style="color: #6366f1; font-weight: 500;">Sign in</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // State management
+        let currentPage = 'home';
+        let isMenuOpen = false;
+
+        // Initialize the application
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeApp();
+        });
+
+        function initializeApp() {
+            setupEventListeners();
+            setupScrollEffects();
+            setupAnimations();
         }
-    }
 
-    function login() {
-        alert("Login pressed!");
-        // toggleLogin(false);
-    }
-</script>
+        function setupEventListeners() {
+            // Navigation event listeners
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', handleNavigation);
+            });
 
+            // Mobile menu toggle
+            const hamburger = document.getElementById('hamburger');
+            const mobileNav = document.getElementById('mobileNav');
+            
+            hamburger.addEventListener('click', function() {
+                toggleMobileMenu();
+            });
 
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!hamburger.contains(e.target) && !mobileNav.contains(e.target)) {
+                    closeMobileMenu();
+                }
+            });
+
+            // Form submissions
+            document.getElementById('loginForm').addEventListener('submit', handleLogin);
+            document.getElementById('registerForm').addEventListener('submit', handleRegister);
+            document.getElementById('contactForm').addEventListener('submit', handleContact);
+
+            // Modal close on backdrop click
+            document.querySelectorAll('.modal').forEach(modal => {
+                modal.addEventListener('click', function(e) {
+                    if (e.target === modal) {
+                        closeModal(modal.id);
+                    }
+                });
+            });
+        }
+
+        function handleNavigation(e) {
+            e.preventDefault();
+            const targetPage = e.target.getAttribute('data-page');
+            if (targetPage) {
+                navigateToPage(targetPage);
+                closeMobileMenu();
+            }
+        }
+
+        function navigateToPage(page) {
+            // Hide current page
+            const currentPageElement = document.getElementById(currentPage);
+            if (currentPageElement) {
+                currentPageElement.classList.remove('active');
+            }
+
+            // Show new page
+            const newPageElement = document.getElementById(page);
+            if (newPageElement) {
+                newPageElement.classList.add('active');
+                currentPage = page;
+            }
+
+            // Update navigation active state
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('data-page') === page) {
+                    link.classList.add('active');
+                }
+            });
+
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            // Trigger animations for the new page
+            setTimeout(() => {
+                triggerPageAnimations(page);
+            }, 100);
+        }
+
+        function toggleMobileMenu() {
+            const hamburger = document.getElementById('hamburger');
+            const mobileNav = document.getElementById('mobileNav');
+            
+            isMenuOpen = !isMenuOpen;
+            
+            if (isMenuOpen) {
+                hamburger.classList.add('active');
+                mobileNav.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            } else {
+                hamburger.classList.remove('active');
+                mobileNav.classList.remove('open');
+                document.body.style.overflow = '';
+            }
+        }
+
+        function closeMobileMenu() {
+            const hamburger = document.getElementById('hamburger');
+            const mobileNav = document.getElementById('mobileNav');
+            
+            hamburger.classList.remove('active');
+            mobileNav.classList.remove('open');
+            document.body.style.overflow = '';
+            isMenuOpen = false;
+        }
+
+        function setupScrollEffects() {
+            const navbar = document.getElementById('navbar');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+        }
+
+        function setupAnimations() {
+            // Intersection Observer for fade-in animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all fade-in elements
+            document.querySelectorAll('.fade-in').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
+        }
+
+        function triggerPageAnimations(page) {
+            const pageElement = document.getElementById(page);
+            const animatedElements = pageElement.querySelectorAll('.fade-in');
+            
+            animatedElements.forEach((el, index) => {
+                setTimeout(() => {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        }
+
+        // Modal functions
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+                
+                // Reset form if exists
+                const form = modal.querySelector('form');
+                if (form) {
+                    form.reset();
+                    hideMessages(modalId);
+                }
+            }
+        }
+
+        function switchModal(currentModalId, targetModalId) {
+            closeModal(currentModalId);
+            setTimeout(() => {
+                openModal(targetModalId);
+            }, 300);
+        }
+
+        function showMessage(messageId, isError = false) {
+            const message = document.getElementById(messageId);
+            if (message) {
+                message.classList.add('show');
+                setTimeout(() => {
+                    message.classList.remove('show');
+                }, 5000);
+            }
+        }
+
+        function hideMessages(modalId) {
+            const modal = document.getElementById(modalId);
+            const messages = modal.querySelectorAll('.success-message, .error-message');
+            messages.forEach(msg => msg.classList.remove('show'));
+        }
+
+        // Form handlers
+        function handleLogin(e) {
+            e.preventDefault();
+            const btn = document.getElementById('loginBtn');
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+
+            if (!email || !password) {
+                showMessage('loginError', true);
+                return;
+            }
+
+            // Show loading state
+            btn.innerHTML = '<div class="loading"></div> Signing In...';
+            btn.disabled = true;
+
+            // Simulate API call
+            setTimeout(() => {
+                // Reset button
+                btn.innerHTML = 'Sign In';
+                btn.disabled = false;
+
+                // Simulate successful login
+                if (email && password) {
+                    showMessage('loginSuccess');
+                    setTimeout(() => {
+                        closeModal('loginModal');
+                    }, 2000);
+                } else {
+                    showMessage('loginError', true);
+                }
+            }, 2000);
+        }
+
+        function handleRegister(e) {
+            e.preventDefault();
+            const btn = document.getElementById('registerBtn');
+            const firstName = document.getElementById('regFirstName').value;
+            const lastName = document.getElementById('regLastName').value;
+            const email = document.getElementById('regEmail').value;
+            const password = document.getElementById('regPassword').value;
+            const confirmPassword = document.getElementById('regConfirmPassword').value;
+
+            if (!firstName || !lastName || !email || !password || !confirmPassword) {
+                showMessage('registerError', true);
+                return;
+            }
+
+            if (password !== confirmPassword) {
+                showMessage('registerError', true);
+                return;
+            }
+
+            // Show loading state
+            btn.innerHTML = '<div class="loading"></div> Creating Account...';
+            btn.disabled = true;
+
+            // Simulate API call
+            setTimeout(() => {
+                // Reset button
+                btn.innerHTML = 'Create Account';
+                btn.disabled = false;
+
+                // Simulate successful registration
+                showMessage('registerSuccess');
+                setTimeout(() => {
+                    closeModal('registerModal');
+                }, 2000);
+            }, 2000);
+        }
+
+        function handleContact(e) {
+            e.preventDefault();
+            const btn = document.getElementById('submitBtn');
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            if (!firstName || !lastName || !email || !subject || !message) {
+                showMessage('contactError', true);
+                return;
+            }
+
+            // Show loading state
+            btn.innerHTML = '<div class="loading"></div> Sending...';
+            btn.disabled = true;
+
+            // Simulate API call
+            setTimeout(() => {
+                // Reset button
+                btn.innerHTML = 'Send Message <i class="fas fa-paper-plane"></i>';
+                btn.disabled = false;
+
+                // Simulate successful submission
+                showMessage('contactSuccess');
+                document.getElementById('contactForm').reset();
+            }, 2000);
+        }
+
+        // Utility functions
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add loading states to all buttons
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                if (this.type !== 'submit') {
+                    this.style.transform = 'scale(0.98)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                    }, 150);
+                }
+            });
+        });
+
+        // Preload images for better performance
+        function preloadImages() {
+            const imageUrls = [
+                'https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3',
+                'https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3',
+                'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3',
+                'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3'
+            ];
+
+            imageUrls.forEach(url => {
+                const img = new Image();
+                img.src = url;
+            });
+        }
+
+        // Call preload function
+        preloadImages();
+
+        // Add keyboard navigation support
+        document.addEventListener('keydown', function(e) {
+            // Close modals with Escape key
+            if (e.key === 'Escape') {
+                const activeModal = document.querySelector('.modal.active');
+                if (activeModal) {
+                    closeModal(activeModal.id);
+                }
+                
+                // Close mobile menu
+                if (isMenuOpen) {
+                    closeMobileMenu();
+                }
+            }
+        });
+
+        // Add focus management for accessibility
+        function trapFocus(element) {
+            const focusableElements = element.querySelectorAll(
+                'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+            );
+            const firstElement = focusableElements[0];
+            const lastElement = focusableElements[focusableElements.length - 1];
+
+            element.addEventListener('keydown', function(e) {
+                if (e.key === 'Tab') {
+                    if (e.shiftKey) {
+                        if (document.activeElement === firstElement) {
+                            lastElement.focus();
+                            e.preventDefault();
+                        }
+                    } else {
+                        if (document.activeElement === lastElement) {
+                            firstElement.focus();
+                            e.preventDefault();
+                        }
+                    }
+                }
+            });
+
+            firstElement.focus();
+        }
+
+        // Apply focus trapping to modals when they open
+        const originalOpenModal = openModal;
+        openModal = function(modalId) {
+            originalOpenModal(modalId);
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                setTimeout(() => trapFocus(modal), 100);
+            }
+        };
+
+        // Add error handling for forms
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+
+        function validatePassword(password) {
+            return password.length >= 8;
+        }
+
+        // Enhanced form validation
+        document.querySelectorAll('.form-input').forEach(input => {
+            input.addEventListener('blur', function() {
+                validateField(this);
+            });
+
+            input.addEventListener('input', function() {
+                clearFieldError(this);
+            });
+        });
+
+        function validateField(field) {
+            const value = field.value.trim();
+            let isValid = true;
+
+            // Remove existing error styling
+            field.classList.remove('error');
+
+            // Check if required field is empty
+            if (field.hasAttribute('required') && !value) {
+                isValid = false;
+            }
+
+            // Email validation
+            if (field.type === 'email' && value && !validateEmail(value)) {
+                isValid = false;
+            }
+
+            // Password validation
+            if (field.type === 'password' && value && !validatePassword(value)) {
+                isValid = false;
+            }
+
+            // Confirm password validation
+            if (field.id === 'regConfirmPassword') {
+                const password = document.getElementById('regPassword').value;
+                if (value && value !== password) {
+                    isValid = false;
+                }
+            }
+
+            if (!isValid) {
+                field.classList.add('error');
+            }
+
+            return isValid;
+        }
+
+        function clearFieldError(field) {
+            field.classList.remove('error');
+        }
+
+        // Add CSS for form validation
+        const style = document.createElement('style');
+        style.textContent = `
+            .form-input.error {
+                border-color: #ef4444 !important;
+                box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1) !important;
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Performance optimization: Lazy load images
+        function lazyLoadImages() {
+            const images = document.querySelectorAll('img[data-src]');
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.classList.remove('lazy');
+                        imageObserver.unobserve(img);
+                    }
+                });
+            });
+
+            images.forEach(img => imageObserver.observe(img));
+        }
+
+        // Initialize lazy loading
+        lazyLoadImages();
+
+        // Add ripple effect to buttons
+        function createRipple(event) {
+            const button = event.currentTarget;
+            const circle = document.createElement('span');
+            const diameter = Math.max(button.clientWidth, button.clientHeight);
+            const radius = diameter / 2;
+
+            circle.style.width = circle.style.height = `${diameter}px`;
+            circle.style.left = `${event.clientX - button.offsetLeft - radius}px`;
+            circle.style.top = `${event.clientY - button.offsetTop - radius}px`;
+            circle.classList.add('ripple');
+
+            const ripple = button.getElementsByClassName('ripple')[0];
+            if (ripple) {
+                ripple.remove();
+            }
+
+            button.appendChild(circle);
+        }
+
+        // Apply ripple effect to buttons
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', createRipple);
+        });
+
+        // Add ripple CSS
+        const rippleStyle = document.createElement('style');
+        rippleStyle.textContent = `
+            .btn {
+                position: relative;
+                overflow: hidden;
+            }
+            
+            .ripple {
+                position: absolute;
+                border-radius: 50%;
+                background-color: rgba(255, 255, 255, 0.3);
+                transform: scale(0);
+                animation: ripple 0.6s linear;
+                pointer-events: none;
+            }
+            
+            @keyframes ripple {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(rippleStyle);
+
+        console.log('🚀 TechVision website initialized successfully!');
+    </script>
+</body>
 </html>
